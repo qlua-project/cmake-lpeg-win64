@@ -1,0 +1,147 @@
+Microsoft (R) COFF/PE Dumper Version 14.43.34808.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file ..\cmake-build-release-x64\lpeg.dll
+
+File Type: DLL
+
+  Section contains the following imports:
+
+    lua53.dll
+             18000A158 Import Address Table
+             18000BA48 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          1A luaL_newmetatable
+                          58 lua_pushinteger
+                          42 lua_getmetatable
+                          39 lua_getallocf
+                          32 lua_compare
+                          57 lua_pushfstring
+                          5D lua_pushstring
+                          5C lua_pushnumber
+                          5B lua_pushnil
+                          61 lua_rawequal
+                          5A lua_pushlstring
+                          65 lua_rawlen
+                           7 luaL_checkany
+                          47 lua_getuservalue
+                           D luaL_checktype
+                          1D luaL_optinteger
+                           8 luaL_checkinteger
+                           9 luaL_checklstring
+                           3 luaL_argerror
+                           F luaL_checkversion_
+                          53 lua_next
+                          75 lua_setuservalue
+                          71 lua_setmetatable
+                          6C lua_setfield
+                          21 luaL_pushresult
+                           2 luaL_addvalue
+                           0 luaL_addlstring
+                          20 luaL_prepbuffsize
+                           4 luaL_buffinit
+                           C luaL_checkstack
+                          2F lua_callk
+                          67 lua_rawseti
+                          72 lua_settable
+                          35 lua_createtable
+                          63 lua_rawgeti
+                          44 lua_gettable
+                          7C lua_tonumberx
+                          25 luaL_setfuncs
+                          7B lua_tolstring
+                          81 lua_typename
+                          4B lua_isstring
+                          5F lua_pushvalue
+                          10 luaL_error
+                          52 lua_newuserdata
+                          3A lua_getfield
+                          59 lua_pushlightuserdata
+                          7F lua_touserdata
+                          78 lua_toboolean
+                          7A lua_tointegerx
+                          80 lua_type
+                          34 lua_copy
+                          6A lua_rotate
+                          73 lua_settop
+                           E luaL_checkudata
+                          45 lua_gettop
+
+    VCRUNTIME140.dll
+             18000A080 Import Address Table
+             18000B970 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          3D memmove
+                           8 __C_specific_handler
+                          25 __std_type_info_destroy_list
+                          3E memset
+                          3C memcpy
+
+    api-ms-win-crt-string-l1-1-0.dll
+             18000A0F8 Import Address Table
+             18000B9E8 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          65 isalpha
+                          67 iscntrl
+                          69 isgraph
+                          6C isprint
+                          64 isalnum
+                          6D ispunct
+                          6E isspace
+                          7E isxdigit
+                          68 isdigit
+                          6B islower
+                          6F isupper
+
+    api-ms-win-crt-runtime-l1-1-0.dll
+             18000A0B0 Import Address Table
+             18000B9A0 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          33 _initialize_narrow_environment
+                          18 _configure_narrow_argv
+                          37 _initterm_e
+                          36 _initterm
+                          34 _initialize_onexit_table
+                          22 _execute_onexit_table
+                          16 _cexit
+                          3F _seh_filter_dll
+
+    KERNEL32.dll
+             18000A000 Import Address Table
+             18000B8F0 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         38E IsDebuggerPresent
+                         378 InitializeSListHead
+                         125 DisableThreadLibraryCalls
+                         2F8 GetSystemTimeAsFileTime
+                         226 GetCurrentThreadId
+                         222 GetCurrentProcessId
+                         45B QueryPerformanceCounter
+                         395 IsProcessorFeaturePresent
+                         5AC TerminateProcess
+                         221 GetCurrentProcess
+                         58D SetUnhandledExceptionFilter
+                         5CE UnhandledExceptionFilter
+                         4EE RtlVirtualUnwind
+                         4E7 RtlLookupFunctionEntry
+                         4DF RtlCaptureContext
+
+  Summary
+
+        1000 .data
+        1000 .pdata
+        3000 .rdata
+        1000 .reloc
+        1000 .rsrc
+        9000 .text
