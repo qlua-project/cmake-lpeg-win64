@@ -1,0 +1,3 @@
+[submodule "lpeg"]
+	path = src
+	url = https://github.com/qlua-project/lpeg
