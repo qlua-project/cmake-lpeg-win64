@@ -4,4 +4,4 @@
 [submodule "lua"]
 	path = externals/lua
 	url = https://github.com/qlua-project/cmake-lua-win64
-	branch = main
+	branch = v5.3.5
