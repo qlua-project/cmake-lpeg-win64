@@ -9,11 +9,17 @@ endif ()
 set ( LPEG_DIR "src" CACHE PATH "Source Directory of 'gvvaughan/lpeg' module" )
 
 set ( ENV{LUA_DIR} "externals/lua" )
-find_package ( Lua REQUIRED )
-message( STATUS "Lua Version ${LUA_VERSION_STRING}" )
-message( STATUS "Lua Includes ${LUA_INCLUDE_DIR}" )
-message( STATUS "Lua Library ${LUA_LIBRARY}" )
-message( STATUS "Lua Libraries ${LUA_LIBRARIES}" )
+# find_package ( Lua REQUIRED )             # FindLua doesnt support lua 5.5+
+include ( $ENV{LUA_DIR}/version.cmake )
+lua_get_header_version ( "$ENV{LUA_DIR}/include" )
+set ( LUA_VERSION_STRING "${LUA_VERSION_MAJOR}.${LUA_VERSION_MINOR}" )
+set ( LUA_INCLUDE_DIR "${PROJECT_SOURCE_DIR}/$ENV{LUA_DIR}/include" )
+set ( LUA_LIBRARY "${PROJECT_SOURCE_DIR}/$ENV{LUA_DIR}/lib/lua${LUA_VERSION_MAJOR}${LUA_VERSION_MINOR}.lib" )
+set ( LUA_LIBRARIES ${LUA_LIBRARY} )
+message ( STATUS "Lua Version ${LUA_VERSION_STRING}" )
+message ( STATUS "Lua Includes ${LUA_INCLUDE_DIR}" )
+message ( STATUS "Lua Library ${LUA_LIBRARY}" )
+message ( STATUS "Lua Libraries ${LUA_LIBRARIES}" )
 
 add_compile_options ( /W4 )
 
