@@ -20,8 +20,10 @@ add_compile_options ( /W4 )
 # from src/makefile
 set ( SRC_FILES
     lpvm.c lpcap.c lptree.c lpcode.c lpprint.c lpcset.c )
+set ( SRC_DEF lpeg.def )
 
 list ( TRANSFORM SRC_FILES PREPEND "${LPEG_DIR}/" )
+list ( TRANSFORM SRC_DEF PREPEND "${LPEG_DIR}/" )
 
 add_library ( lpeg MODULE ${SRC_FILES} )
 target_compile_definitions ( lpeg PRIVATE
@@ -32,6 +34,7 @@ target_compile_definitions ( lpeg PRIVATE
         # MAXRECLEVEL=200
 )
 target_include_directories ( lpeg PRIVATE ${LUA_INCLUDE_DIR} )
+target_link_options ( lpeg PRIVATE ${CMAKE_LINK_DEF_FILE_FLAG}${PROJECT_SOURCE_DIR}/${SRC_DEF} )
 target_link_libraries ( lpeg ${LUA_LIBRARIES} )
 set_target_properties ( lpeg PROPERTIES OUTPUT_NAME "lpeg" )
 
