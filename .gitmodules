@@ -1,3 +1,7 @@
 [submodule "lpeg"]
 	path = src
 	url = https://github.com/qlua-project/lpeg
+[submodule "lua"]
+	path = externals/lua
+	url = https://github.com/qlua-project/cmake-lua-win64
+	branch = main
